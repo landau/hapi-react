@@ -1,10 +1,10 @@
 {
   "name": "hapi-react",
   "version": "1.0.0",
-  "description": "A port of `express-react-views` for `hapi`",
+  "description": "This is Hapi view engine which renders React components on server. It renders static markup and *does not* support mounting those views on the client.",
   "main": "index.js",
   "scripts": {
-    "pretest": "jshint --reporter node_modules/jshint-stylish/stylish.js index.js test.js",
+    "pretest": "jshint index.js test.js",
     "test": "mocha -R nyan test.js"
   },
   "repository": {
@@ -26,5 +26,20 @@
   "bugs": {
     "url": "https://github.com/landau/hapi-react/issues"
   },
-  "homepage": "https://github.com/landau/hapi-react"
+  "homepage": "https://github.com/landau/hapi-react",
+  "dependencies": {
+    "js-beautify": "^1.5.4",
+    "lodash.merge": "^2.4.1",
+    "node-jsx": "0.11.0",
+    "react-tools": "0.11.x"
+  },
+  "peerDependencies": {
+    "react": "0.11.x"
+  },
+  "devDependencies": {
+    "hapi": "^7.5.2",
+    "jshint": "^2.5.10",
+    "mocha": "^2.0.1",
+    "react": "0.11.x"
+  }
 }
