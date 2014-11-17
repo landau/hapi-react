@@ -1,0 +1,30 @@
+{
+  "name": "hapi-react",
+  "version": "1.0.0",
+  "description": "A port of `express-react-views` for `hapi`",
+  "main": "index.js",
+  "scripts": {
+    "pretest": "jshint --reporter node_modules/jshint-stylish/stylish.js index.js test.js",
+    "test": "mocha -R nyan test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/landau/hapi-react.git"
+  },
+  "keywords": [
+    "hapi",
+    "react",
+    "views",
+    "view",
+    "render",
+    "hapijs",
+    "reactjs",
+    "jsx"
+  ],
+  "author": "Trevor Landau",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/landau/hapi-react/issues"
+  },
+  "homepage": "https://github.com/landau/hapi-react"
+}

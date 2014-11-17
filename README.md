@@ -1,4 +1,4 @@
 hapi-react
 ==========
 
-Render hapi views
+A port of `express-react-views` for `hapi`
