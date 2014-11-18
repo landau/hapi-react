@@ -3,7 +3,7 @@
 hapi-react
 ==========
 
-> A port of `[express-react-views](https://github.com/reactjs/express-react-views)` to `hapi`
+> A port of [`express-react-views`](https://github.com/reactjs/express-react-views) to `hapi`
 
 This is an hapi view engine which renders React components on server. It renders static markup and does not support mounting those views on the client.
 
@@ -23,7 +23,7 @@ The `1.x.x` version(s) is reserved for `React` 0.11.x versions. Versions `2.x.x`
 
 Add it to your app
 
-'''js
+```js
 server = new hapi.Server(0);
 var engine = require('hapi-react')();
 
@@ -34,7 +34,7 @@ server.views({
     js: engine // support for .js
   }
 });
-'''
+```
 
 ### Options
 
@@ -56,7 +56,6 @@ server.views({
     jsx: require('hapi-react')(options)
   }
 });
-'''
 ```
 
 ### Views
