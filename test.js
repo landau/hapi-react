@@ -22,10 +22,14 @@ describe('hapi-react', function() {
   });
 
   it('renders a .jsx file', function(done) {
+    // Verify that it renders once
     server.render('hi', { message: 'hi' }, function(err, rendered) {
-      var expected = '<!DOCTYPE html><html><head></head><body>hi</body></html>';
-      assert.equal(rendered, expected);
-      done();
+      server.render('hi', { message: 'hi' }, function(err, _rendered) {
+        var expected = '<!DOCTYPE html><html><head></head><body>hi</body></html>';
+        assert.equal(rendered, expected);
+        assert.equal(_rendered, expected);
+        done();
+      });
     });
   });
 

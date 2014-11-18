@@ -25,10 +25,10 @@ module.exports = function createEngine(engineOptions) {
 
   function compile(template, options) {
     var filename = options.filename;
-    var markup, component;
+    var doctype = engineOptions.doctype;
+    var component;
 
     try {
-      markup = engineOptions.doctype;
       component = require(filename);
       // Transpiled ES6 may export components as { default: Component }
       component = component.default || component;
@@ -39,6 +39,8 @@ module.exports = function createEngine(engineOptions) {
     }
 
     return function _compile(context) {
+      var markup = doctype;
+
       try {
         markup += React.renderComponentToStaticMarkup(component(context));
       } catch (e) {

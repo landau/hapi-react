@@ -93,6 +93,10 @@ server.route({
 
 ## Changelog
 
+#### 1.0.1
+
+- Fix issue where template was embedding twice
+
 #### 1.0.0 
 
 - Initial port
