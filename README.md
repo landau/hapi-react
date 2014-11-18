@@ -15,7 +15,7 @@ This is intended to be used as a replacement for existing server-side view solut
 
 Note: You must explicitly install react as a dependency. React is a peer dependency here. This is to avoid issues that may come when using incompatible versions.
 
-## Support for React 0.11.x
+## Support for `React 0.11.x`
 
 The `1.x.x` version(s) is reserved for `React` `0.11.x` versions. Versions `2.x.x` and up will support `React` `0.12.x` and up.
 
