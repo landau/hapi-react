@@ -1,6 +1,6 @@
 {
   "name": "hapi-react",
-  "version": "1.0.1",
+  "version": "2.0.0",
   "description": "This is Hapi view engine which renders React components on server. It renders static markup and *does not* support mounting those views on the client.",
   "main": "index.js",
   "scripts": {
@@ -30,16 +30,16 @@
   "dependencies": {
     "js-beautify": "^1.5.4",
     "lodash.merge": "^2.4.1",
-    "node-jsx": "0.11.0",
-    "react-tools": "0.11.x"
+    "node-jsx": "^0.12.0",
+    "react-tools": "^0.12.0"
   },
   "peerDependencies": {
-    "react": "0.11.x"
+    "react": "^0.12.0"
   },
   "devDependencies": {
     "hapi": "^7.5.2",
     "jshint": "^2.5.10",
     "mocha": "^2.0.1",
-    "react": "0.11.x"
+    "react": "^0.12.0"
   }
 }

@@ -32,6 +32,7 @@ module.exports = function createEngine(engineOptions) {
       component = require(filename);
       // Transpiled ES6 may export components as { default: Component }
       component = component.default || component;
+      component = React.createFactory(component);
     } catch (e) {
       return function() {
         throw e;
@@ -42,7 +43,7 @@ module.exports = function createEngine(engineOptions) {
       var markup = doctype;
 
       try {
-        markup += React.renderComponentToStaticMarkup(component(context));
+        markup += React.renderToStaticMarkup(component(context));
       } catch (e) {
         throw e;
       }
