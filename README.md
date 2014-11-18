@@ -38,7 +38,6 @@ server.views({
 
 ### Options
 
-
 option | values | default
 -------|--------|--------
 `jsx.harmony` | `true`: enable a subset of ES6 features | `false`
@@ -92,6 +91,10 @@ server.route({
 ```
 
 ## Changelog
+
+#### 2.0.0
+
+- Upgrade to React 12
 
 #### 1.0.1
 
