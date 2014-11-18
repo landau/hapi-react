@@ -17,7 +17,7 @@ Note: You must explicitly install react as a dependency. React is a peer depende
 
 ## Support for React 0.11.x
 
-The `1.x.x` version(s) is reserved for `React` 0.11.x versions. Versions `2.x.x` and up will support `React` 0.12.x and up.
+The `1.x.x` version(s) is reserved for `React` `0.11.x` versions. Versions `2.x.x` and up will support `React` `0.12.x` and up.
 
 ## Usage
 
