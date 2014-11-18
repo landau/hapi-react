@@ -23,14 +23,16 @@ describe('hapi-react', function() {
 
   it('renders a .jsx file', function(done) {
     server.render('hi', { message: 'hi' }, function(err, rendered) {
-      assert(/hi/g.test(rendered), 'Expected `hi` to be in the string');
+      var expected = '<!DOCTYPE html><html><head></head><body>hi</body></html>';
+      assert.equal(rendered, expected);
       done();
     });
   });
 
   it('renders a .js file', function(done) {
     server.render('bye.js', { message: 'bye' }, function(err, rendered) {
-      assert(/bye/g.test(rendered), 'Expected `bye` to be in the string');
+      var expected = '<!DOCTYPE html><html><head></head><body>bye</body></html>';
+      assert.equal(rendered, expected);
       done();
     });
   });
