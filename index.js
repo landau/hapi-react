@@ -11,11 +11,12 @@ var DEFAULT_OPTIONS = {
     harmony: false
   },
   doctype: '<!DOCTYPE html>',
-  beautify: false
+  beautify: false,
+  static: true
 };
 
 module.exports = function createEngine(engineOptions) {
-  engineOptions = _merge(DEFAULT_OPTIONS, engineOptions);
+  engineOptions = _merge({}, DEFAULT_OPTIONS, engineOptions);
 
   // Don't install the require until the engine is created. This lets us leave
   // the option of using harmony features up to the consumer.
@@ -40,10 +41,11 @@ module.exports = function createEngine(engineOptions) {
     }
 
     return function _compile(context) {
-      var markup = doctype;
+      var markup = doctype,
+          render = engineOptions.static ? 'renderToStaticMarkup' : 'renderToString';
 
       try {
-        markup += React.renderToStaticMarkup(component(context));
+        markup += React[render](component(context));
       } catch (e) {
         throw e;
       }
