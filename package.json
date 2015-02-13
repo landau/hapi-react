@@ -37,7 +37,7 @@
     "react": "^0.12.0"
   },
   "devDependencies": {
-    "hapi": "^7.5.2",
+    "hapi": "^8.2.0",
     "jshint": "^2.5.10",
     "mocha": "^2.0.1",
     "react": "^0.12.0"
