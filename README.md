@@ -92,6 +92,10 @@ server.route({
 
 ## Changelog
 
+#### 2.0.1
+- Upgrade deps
+- Update codebase to match `express-react-views`
+
 #### 2.0.0
 
 - Upgrade to React 12
