@@ -92,6 +92,9 @@ server.route({
 
 ## Changelog
 
+#### 2.0.2
+- Remove `lodash.merge` dep
+
 #### 2.0.1
 - Upgrade deps
 - Update codebase to match `express-react-views`
