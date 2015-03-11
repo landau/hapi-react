@@ -92,6 +92,9 @@ server.route({
 
 ## Changelog
 
+#### 3.0.0
+- Upgrade react to v0.13.0
+
 #### 2.0.2
 - Remove `lodash.merge` dep
 
