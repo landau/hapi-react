@@ -31,15 +31,15 @@
     "js-beautify": "^1.5.4",
     "node-jsx": "^0.12.0",
     "object-assign": "^2.0.0",
-    "react-tools": "^0.12.0"
+    "react-tools": "^0.13.0"
   },
   "peerDependencies": {
-    "react": "^0.12.0"
+    "react": "^0.13.0"
   },
   "devDependencies": {
     "hapi": "^8.2.0",
     "jshint": "^2.5.10",
     "mocha": "^2.0.1",
-    "react": "^0.12.0"
+    "react": "^0.13.0"
   }
 }
