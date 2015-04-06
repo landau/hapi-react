@@ -29,8 +29,6 @@ module.exports = function createEngine(engineOptions) {
   // the option of using harmony features up to the consumer.
   nodeJSX.install(engineOptions.jsx);
 
-  var moduleDetectRegEx = new RegExp('\\' + engineOptions.jsx.extension + '$');
-
   function compile(template, options) {
     var filename = options.filename;
     var doctype = engineOptions.doctype;
@@ -62,15 +60,8 @@ module.exports = function createEngine(engineOptions) {
         markup = beautifyHTML(markup);
       }
 
-      if (options.env === 'development') {
-        // Remove all files from the module cache that use our extension. If we're
-        // using .js, this could be sloooow. On the plus side, we can now make changes
-        // to our views without needing to restart the server.
-        Object.keys(require.cache).forEach(function(module) {
-          if (moduleDetectRegEx.test(require.cache[module].filename)) {
-            delete require.cache[module];
-          }
-        });
+      if (options.env === 'development' || options.cached === false || engineOptions.cached === false) {
+        delete require.cache[require.resolve(options.filename)];
       }
 
       return markup;
