@@ -92,6 +92,9 @@ server.route({
 
 ## Changelog
 
+#### 3.0.1
+- Upgrade react to v0.13.1
+
 #### 3.0.0
 - Upgrade react to v0.13.0
 
