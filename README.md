@@ -91,6 +91,8 @@ server.route({
 ```
 
 ## Changelog
+#### 3.1.0
+- Use babel
 
 #### 3.0.1
 - Upgrade react to v0.13.1
