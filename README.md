@@ -40,15 +40,13 @@ server.views({
 
 option | values | default
 -------|--------|--------
-`jsx.harmony` | `true`: enable a subset of ES6 features | `false`
-`jsx.extension` | any file extension with leading `.` | `".jsx"`
 `doctype` | any string that can be used as [a doctype](http://en.wikipedia.org/wiki/Document_type_declaration), this will be prepended to your document | `"<!DOCTYPE html>"`
 `beautify` | `true`: beautify markup before outputting (note, this can affect rendering due to additional whitespace) | `false`
 
 The defaults are sane, but just in case you want to change something, here's how it would look:
 
 ```js
-var options = { jsx: { harmony: true } };
+var options = { beautify: true };
 
 server.views({
   engines: {
@@ -58,6 +56,8 @@ server.views({
 ```
 
 ### Views
+
+Under the hood, [Babel][babel] is used to compile your views into ES5 friendly code, using the default Babel options.  Only the files in your `views` directory (i.e. `app.set('views', __dirname + '/views')`) will be compiled.
 
 Your views should be node modules that export a React component. Let's assume you have this file in `views/index.jsx`:
 
