@@ -91,7 +91,10 @@ server.route({
 ```
 
 ## Changelog
-#### 3.1.0
+#### 3.1.2
+- Fix file path value
+
+#### 3.1.1
 - Use given view path for babel (Windows issue)
 
 #### 3.1.0
