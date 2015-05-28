@@ -1,6 +1,6 @@
 {
   "name": "hapi-react",
-  "version": "3.1.0",
+  "version": "3.1.1",
   "description": "This is Hapi view engine which renders React components on server. It renders static markup and *does not* support mounting those views on the client.",
   "main": "index.js",
   "scripts": {

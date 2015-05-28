@@ -92,6 +92,9 @@ server.route({
 
 ## Changelog
 #### 3.1.0
+- Use given view path for babel (Windows issue)
+
+#### 3.1.0
 - Use babel
 
 #### 3.0.1
