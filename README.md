@@ -11,7 +11,7 @@ This is intended to be used as a replacement for existing server-side view solut
 
 ## Install
 
-`npm i -S hapi-react`
+`npm i -S hapi-react react react-dom`
 
 Note: You must explicitly install react as a dependency. React is a peer dependency here. This is to avoid issues that may come when using incompatible versions.
 

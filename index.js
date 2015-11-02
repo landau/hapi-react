@@ -1,6 +1,7 @@
 'use strict';
 
 var React = require('react');
+var ReactDOMServer = require('react-dom/server');
 var beautifyHTML = require('js-beautify').html;
 var assign = require('object-assign');
 var path = require('path');
@@ -43,7 +44,7 @@ module.exports = function createEngine(engineOptions) {
       var markup = engineOptions.doctype;
 
       try {
-        markup += React.renderToStaticMarkup(React.createElement(component, context));
+        markup += ReactDOMServer.renderToStaticMarkup(React.createElement(component, context));
       } catch (e) {
         throw e;
       }
