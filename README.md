@@ -91,6 +91,10 @@ server.route({
 ```
 
 ## Changelog
+#### 4.0.0
+- Use `react@0.14.0`
+- Use `react-dom`
+
 #### 3.1.2
 - Fix file path value
 
