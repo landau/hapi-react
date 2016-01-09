@@ -27,12 +27,18 @@ Add it to your app
 server = new hapi.Server(0);
 var engine = require('hapi-react')();
 
-server.views({
-  defaultExtension: 'jsx',
-  engines: {
-    jsx: engine, // support for .jsx files
-    js: engine // support for .js
-  }
+server.register(require('vision'), (err) => {
+  assert.ifError(err);
+
+  server.views({
+    defaultExtension: 'jsx',
+    engines: {
+      jsx: engine, // support for .jsx files
+      js: engine // support for .js
+    },
+    relativeTo: __dirname,
+    path: 'views'
+  });
 });
 ```
 
