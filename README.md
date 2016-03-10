@@ -68,8 +68,6 @@ Under the hood, [Babel](http://babeljs.io/) is used to compile your views into E
 Your views should be node modules that export a React component. Let's assume you have this file in `views/index.jsx`:
 
 ```js
-/** @jsx React.DOM */
-
 var React = require('react');
 var HelloMessage = React.createClass({
   render: function() {
