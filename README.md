@@ -42,6 +42,10 @@ option | values | default
 -------|--------|--------
 `doctype` | any string that can be used as [a doctype](http://en.wikipedia.org/wiki/Document_type_declaration), this will be prepended to your document | `"<!DOCTYPE html>"`
 `beautify` | `true`: beautify markup before outputting (note, this can affect rendering due to additional whitespace) | `false`
+`transformViews` | true: use babel to apply JSX, ESNext transforms to views.
+Note: if already using babel-register in your project, you should set this to false | `true`
+`babel` | any object containing valid Babel options
+Note: does not merge with defaults | {presets: ['react', 'es2015']}
 
 The defaults are sane, but just in case you want to change something, here's how it would look:
 
@@ -90,41 +94,3 @@ server.route({
 })
 ```
 
-## Changelog
-#### 4.0.0
-- Use `react@0.14.0`
-- Use `react-dom`
-
-#### 3.1.2
-- Fix file path value
-
-#### 3.1.1
-- Use given view path for babel (Windows issue)
-
-#### 3.1.0
-- Use babel
-
-#### 3.0.1
-- Upgrade react to v0.13.1
-
-#### 3.0.0
-- Upgrade react to v0.13.0
-
-#### 2.0.2
-- Remove `lodash.merge` dep
-
-#### 2.0.1
-- Upgrade deps
-- Update codebase to match `express-react-views`
-
-#### 2.0.0
-
-- Upgrade to React 12
-
-#### 1.0.1
-
-- Fix issue where template was embedding twice
-
-#### 1.0.0 
-
-- Initial port
