@@ -29,3 +29,4 @@ Index.propTypes = {
 };
 
 module.exports = Index;
+
