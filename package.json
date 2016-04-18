@@ -28,8 +28,8 @@
   },
   "homepage": "https://github.com/landau/hapi-react",
   "peerDependencies": {
-    "react": "^0.14.0",
-    "react-dom": "^0.14.0"
+    "react": "^0.14.0 || ^15.0.0",
+    "react-dom": "^0.14.0 || ^15.0.0"
   },
   "dependencies": {
     "babel": "^5.8.23",
@@ -41,7 +41,7 @@
     "hapi": "^8.5.2",
     "jshint": "^2.5.10",
     "mocha": "^2.2.5",
-    "react": "^0.14.0",
-    "react-dom": "^0.14.0"
+    "react": "^15.0.0",
+    "react-dom": "^15.0.0"
   }
 }
