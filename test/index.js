@@ -36,7 +36,7 @@ describe('hapi-react', function() {
   });
 
   it('renders a regular js', function(done) {
-    this.timeout(5e3);
+    this.timeout(30e3);
     testComponent('standard-js.js', done);
   });
 
