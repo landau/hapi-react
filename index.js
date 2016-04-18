@@ -8,23 +8,34 @@ var path = require('path');
 
 var DEFAULT_OPTIONS = {
   doctype: '<!DOCTYPE html>',
-  beautify: false
+  beautify: false,
+  transformViews: true,
+  babel: {
+    presets: [
+      'react',
+      'es2015'
+    ]
+  }
 };
 
 module.exports = function createEngine(engineOptions) {
   var registered = false;
   var moduleDetectRegEx;
+  var filePath;
   engineOptions = assign({}, DEFAULT_OPTIONS, engineOptions || {});
 
   function compile(template, options) {
     // Defer babel registration until the first request so we can grab the view path.
-    if (!registered) {
-      var filePath = path.dirname(options.filename);
+    if (!moduleDetectRegEx) {
+      filePath = path.dirname(options.filename);
       moduleDetectRegEx = new RegExp('^' + filePath);
+    }
+
+    if (engineOptions.transformViews && !registered) {
 
       // Passing a RegExp to Babel results in an issue on Windows so we'll just
       // pass the view path.
-      require('babel/register')({ only: filePath });
+      require('babel-register')(assign({ only: filePath }, engineOptions.babel));
       registered = true;
     }
 

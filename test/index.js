@@ -20,7 +20,7 @@ describe('hapi-react', function() {
     });
 
     testComponent = function(view, cb) {
-      server.render(view, {}, function(err, source) {
+      server.render(view, { title: 'foo' }, function(err, source) {
         if (err) {
           return cb(err);
         }
@@ -36,6 +36,7 @@ describe('hapi-react', function() {
   });
 
   it('renders a regular js', function(done) {
+    this.timeout(3e3);
     testComponent('standard-js.js', done);
   });
 
