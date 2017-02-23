@@ -40,10 +40,11 @@
     "object-assign": "^4.0.1"
   },
   "devDependencies": {
-    "hapi": "^8.5.2",
+    "hapi": "^16.1.0",
     "jshint": "^2.5.10",
-    "mocha": "3.2.0",
+    "mocha": "^3.2.0",
     "react": "^15.0.0",
-    "react-dom": "^15.0.0"
+    "react-dom": "^15.0.0",
+    "vision": "^4.1.1"
   }
 }

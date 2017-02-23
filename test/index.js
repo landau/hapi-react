@@ -7,16 +7,23 @@ var engine = require('../')();
 describe('hapi-react', function() {
   var server, testComponent;
 
-  before(function() {
+  before(function(done) {
     server = new hapi.Server(0);
-
-    server.views({
-      defaultExtension: 'jsx',
-      path: path.join(__dirname, 'fixtures'),
-      engines: {
-        jsx: engine,
-        js: engine
+    server.register(require('vision'), function(err) {
+      if (err) {
+        return done(err);
       }
+
+      server.views({
+        defaultExtension: 'jsx',
+        path: path.join(__dirname, 'fixtures'),
+        engines: {
+          jsx: engine,
+          js: engine
+        }
+      });
+
+      done();
     });
 
     testComponent = function(view, cb) {
