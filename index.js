@@ -5,6 +5,8 @@ var ReactDOMServer = require('react-dom/server');
 var beautifyHTML = require('js-beautify').html;
 var assign = require('object-assign');
 var path = require('path');
+var _escaperegexp = require('lodash.escaperegexp');
+
 
 var DEFAULT_OPTIONS = {
   doctype: '<!DOCTYPE html>',
@@ -28,7 +30,7 @@ module.exports = function createEngine(engineOptions) {
     // Defer babel registration until the first request so we can grab the view path.
     if (!moduleDetectRegEx) {
       filePath = path.dirname(options.filename);
-      moduleDetectRegEx = new RegExp('^' + filePath);
+      moduleDetectRegEx = new RegExp('^' + _escaperegexp(filePath));
     }
 
     if (engineOptions.transformViews && !registered) {

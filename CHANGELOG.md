@@ -1,3 +1,5 @@
+- Escape special chars in view path before using in regexp 
+
 #### 5.0.0
 - Support `react@15.0.0`
 - Sync codebase with `express-react-views`
