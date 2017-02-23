@@ -1,3 +1,4 @@
+#### 5.0.1
 - Escape special chars in view path before using in regexp 
 - Clear module cache on errors
 
