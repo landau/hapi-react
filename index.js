@@ -7,7 +7,6 @@ var assign = require('object-assign');
 var path = require('path');
 var _escaperegexp = require('lodash.escaperegexp');
 
-
 var DEFAULT_OPTIONS = {
   doctype: '<!DOCTYPE html>',
   beautify: false,
@@ -60,6 +59,15 @@ module.exports = function createEngine(engineOptions) {
         markup += ReactDOMServer.renderToStaticMarkup(React.createElement(component, context));
       } catch (e) {
         throw e;
+      } finally {
+        if (options.env === 'development') {
+          // Remove all files from the module cache that are in the view folder.
+          Object.keys(require.cache).forEach(function(module) {
+            if (moduleDetectRegEx.test(require.cache[module].filename)) {
+              delete require.cache[module];
+            }
+          });
+        }
       }
 
       if (engineOptions.beautify) {
@@ -68,14 +76,6 @@ module.exports = function createEngine(engineOptions) {
         markup = beautifyHTML(markup);
       }
 
-      if (options.env === 'development') {
-        // Remove all files from the module cache that are in the view folder.
-        Object.keys(require.cache).forEach(function(module) {
-          if (moduleDetectRegEx.test(require.cache[module].filename)) {
-            delete require.cache[module];
-          }
-        });
-      }
 
       return markup;
     };
