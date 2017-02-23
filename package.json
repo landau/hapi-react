@@ -39,7 +39,6 @@
     "object-assign": "^4.0.1"
   },
   "devDependencies": {
-    "asyn": "0.0.1",
     "async": "^1.4.2",
     "hapi": "^8.5.2",
     "jshint": "^2.5.10",
