@@ -1,3 +1,7 @@
+# THIS PROJECT IS NO LONGER MAINTAINED. 
+
+Consider deferring to [hapi-react-views](https://github.com/jedireza/hapi-react-views).
+
 [![Build Status](https://travis-ci.org/landau/hapi-react.svg)](https://travis-ci.org/landau/hapi-react)
 
 hapi-react
